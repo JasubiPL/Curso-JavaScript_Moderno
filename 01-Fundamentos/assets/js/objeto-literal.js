@@ -26,3 +26,23 @@ console.log(personaje.trajes[personaje.trajes.length -1]);//Ultimo traje
 const x = "vivo";
 console.log("Esta vivo?", personaje[x]);//busca el valor "x" en el objeto y retorna true o false
 console.log("Ultimo traje", personaje["ultimo-trabajo"]);//Asi se accede al valor de una propiedad entre comillas dentro de un objeto
+
+/*----Mas Detalles----*/
+
+delete personaje.edad; //elimina un elemento edad de el objeto
+
+personaje.casado = true;//Se añade otro elemento al objeto
+
+const entriesPares = Object.entries(personaje);//Genera un arrya con los elemntos en otro array
+console.log(entriesPares);
+
+Object.freeze(personaje);//BLoquea el los elementos dentro de el objeto, ecepto on¿bjetos dentro del mismo
+personaje.batman = "DC Comics";
+
+const propiedades = Object.getOwnPropertyNames(personaje);//Crea un arreglo con solo las propiedades del elemento, sin tomar encuenta el valor asignado
+const valores = Object.values(personaje);//Crea un array con los valores de los elementos
+console.log(propiedades);
+console.log(valores);
+
+
+
